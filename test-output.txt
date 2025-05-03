@@ -1,0 +1,143 @@
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/chrisjune/Desktop/accounting app/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/chrisjune/Desktop/accounting app/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/chrisjune/Desktop/accounting app/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/chrisjune/Desktop/accounting app/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/chrisjune/Desktop/accounting app/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/chrisjune/Desktop/accounting app/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+ts-jest[config] (WARN) 
+    The "ts-jest" config option "isolatedModules" is deprecated and will be removed in v30.0.0. Please use "isolatedModules: true" in /Users/chrisjune/Desktop/accounting app/tsconfig.json instead, see https://www.typescriptlang.org/tsconfig/#isolatedModules
+  
+PASS tests/agents/insightsUIAgent.test.ts
+  Insights UI Agent
+    ✓ Tools: should generate dashboard (7 ms)
+    ✓ Resources: should manage dashboard configs (1 ms)
+    ✓ Prompts: should have dashboard prompt
+
+PASS tests/agents/categorizerAgent.test.ts
+  Categorizer Agent
+    ✓ Tools: should categorize transactions (16 ms)
+    ✓ Prompts: should have a categorization prompt (1 ms)
+
+FAIL tests/agents/analyzerAgent.test.ts
+  Analyzer Agent
+    ✓ Tools: should run analysis (6 ms)
+    ✕ Resources: should store analysis history (2 ms)
+    ✓ Prompts: should have analysis prompt (1 ms)
+
+  ● Analyzer Agent › Resources: should store analysis history
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+       9 |   it('Resources: should store analysis history', () => {
+      10 |     analyzerTools.runAnalysis('trend', [1,2,3]);
+    > 11 |     expect(analyzerResources.analysisHistory.length).toBeGreaterThan(0);
+         |                                                      ^
+      12 |   });
+      13 |
+      14 |   it('Prompts: should have analysis prompt', () => {
+
+      at Object.<anonymous> (tests/agents/analyzerAgent.test.ts:11:54)
+
+PASS tests/agents/summarizationAgent.test.ts
+  Summarization Agent
+    ✓ Tools: should summarize text (129 ms)
+    ✓ Prompts: should have summarization prompt
+
+PASS tests/agents/integrationAgent.test.ts
+  Integration Agent
+    ✓ Prompts: should have integration prompt
+
+PASS tests/agents/notificationAgent.test.ts
+  Notification Agent
+    ✓ Prompts: should have notification prompt (1 ms)
+
+PASS tests/agents/privacyRedactionAgent.test.ts
+  Privacy Redaction Agent
+    ✓ Tools: should redact sensitive info (189 ms)
+    ✓ Prompts: should have redaction prompt
+
+PASS tests/agents/localizationAgent.test.ts
+  Localization Agent
+    ✓ Tools: should localize text (6 ms)
+    ✓ Prompts: should have localization prompt
+
+PASS tests/agents/dataQualityAgent.test.ts
+  Data Quality Agent
+    ✓ Resources: should store and retrieve quality rules (1 ms)
+    ✓ Tools: should run a quality check and log results (1 ms)
+    ✓ Prompts: prompt template should include required variables
+
+PASS tests/agents/userFeedbackAgent.test.ts
+  User Feedback Agent
+    ✓ Tools: should submit feedback (3 ms)
+    ✓ Prompts: should have feedback prompt (1 ms)
+
+PASS tests/agents/sessionStateAgent.test.ts
+  Session State Agent
+    ✓ Tools: should update session state (1 ms)
+    ✓ Prompts: should have session state prompt
+
+PASS tests/agents/crudAgent.test.ts
+  CRUD Agent
+    ✓ Prompts: should have CRUD prompts (1 ms)
+
+PASS tests/agents/auditComplianceAgent.test.ts
+  Audit Compliance Agent
+    ✓ Tools: should run audit (1 ms)
+    ✓ Prompts: should have audit prompt (1 ms)
+
+PASS tests/agents/accessControlAgent.test.ts
+  Access Control Agent
+    ✓ Prompts: should have access control prompt (1 ms)
+
+PASS tests/agents/documentConversionAgent.test.ts
+  Document Conversion Agent
+    ✓ Tools: should convert document format (1 ms)
+    ✓ Prompts: should have document conversion prompt
+
+  console.log
+    Server running on http://localhost:5001
+
+      at Server.<anonymous> (src/server.js:97:11)
+
+[0mPOST /api/validator/validate [32m200[0m 2.204 ms - 28[0m
+PASS tests/agents/errorRecoveryAgent.test.ts
+  Error Recovery Agent
+    ✓ Tools: should attempt recovery (129 ms)
+    ✓ Resources: should log recovery actions (1336 ms)
+    ✓ Prompts: should have a recovery prompt
+
+PASS tests/agents/recommenderAgent.test.ts
+  Recommender Agent
+    ✓ Tools: should generate a recommendation (772 ms)
+    ✓ Resources: should log recommendations (727 ms)
+    ✓ Prompts: should have a recommendation prompt (1 ms)
+
+PASS tests/agents/statementValidatorAgent.test.ts
+  Statement Validator Agent
+    ✓ API: should validate a statement and return expected structure (95 ms)
+    ✓ Resources: should log validation results (608 ms)
+    ✓ Tools: should detect duplicates (905 ms)
+    ✓ Prompts: prompt template should include required variables (1 ms)
+
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+Test Suites: 1 failed, 17 passed, 18 total
+Tests:       1 failed, 38 passed, 39 total
+Snapshots:   0 total
+Time:        4.518 s, estimated 6 s
+Ran all test suites.
