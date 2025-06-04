@@ -1,8 +1,8 @@
-// / **
-//  * Recommender Agent
-//  * Offers AI-suggested financial actions based on analysis results (e.g., reduce overhead, optimize spending).
-//  * Provides actionable recommendations to users.
-//  * /
+/**
+ * Recommender Agent
+ * Offers AI-suggested financial actions based on analysis results
+ * Provides actionable recommendations to users.
+ */
 import type { Tool, ToolResult } from "../modelcontextprotocol/tool";
 
 // Types
