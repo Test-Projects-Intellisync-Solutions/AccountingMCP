@@ -229,14 +229,4 @@ router.post('/action', async (req: Request, res: Response) => {
   }
 });
 
-// GET /api/financial-metrics/metrics
-router.get('/metrics', (req: Request, res: Response) => {
-  try {
-    const metrics = Object.values(financialMetricsAgentResources.metricDefinitions).map(m => ({ name: m.name, formula: m.formula }));
-    res.json({ success: true, metrics });
-  } catch (err: any) {
-    res.status(500).json({ success: false, error: err.message });
-  }
-});
-
 export default router;
