@@ -301,7 +301,7 @@ app.get("/mcp", handleSessionRequest);
 // Handle DELETE requests for session termination
 app.delete("/mcp", handleSessionRequest);
 
-app.listen(3000);
+app.listen(5001);
 ```
 
 #### Without Session Management (Stateless)
@@ -374,7 +374,7 @@ app.delete("/mcp", async (req: Request, res: Response) => {
 });
 
 // Start the server
-const PORT = 3000;
+const PORT = 5001;
 app.listen(PORT, () => {
   console.log(`MCP Stateless Streamable HTTP Server listening on port ${PORT}`);
 });
@@ -715,7 +715,7 @@ const proxyProvider = new ProxyOAuthServerProvider({
   getClient: async (client_id) => {
     return {
       client_id,
-      redirect_uris: ["http://localhost:3000/callback"],
+      redirect_uris: ["http://localhost:5001/callback"],
     };
   },
 });
@@ -832,7 +832,7 @@ app.post("/messages", async (req, res) => {
   }
 });
 
-app.listen(3000);
+app.listen(5001);
 ```
 
 **Note**: The SSE transport is now deprecated in favor of Streamable HTTP. New implementations should use Streamable HTTP, and existing SSE implementations should plan to migrate.
