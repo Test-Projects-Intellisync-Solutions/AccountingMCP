@@ -1,8 +1,8 @@
 import { errorRecoveryTools, errorRecoveryResources, errorRecoveryAgentPrompts } from '../../src/agents/errorRecoveryAgent';
 
 describe('Error Recovery Agent', () => {
-  it('Tools: should attempt recovery', () => {
-    const result = errorRecoveryTools.recover('test-error', {});
+  it('Tools: should attempt recovery', async () => {
+    const result = await errorRecoveryTools.recover('test-error', {});
     expect(result).toBeDefined();
   });
 
